@@ -31,26 +31,29 @@
     width: 25px;
     height: 25px;
     background-color: rgb(161, 110, 163);
-    
-    
+    background-blend-mode: multiply;
+    transition-duration: 0.7s;
 }
 .left{
     background-image: url("src/top.png");
     background-color: rgb(207, 219, 238);
     background-size: contain;
     transition-duration: 0.7s;
+    background-blend-mode: multiply;
 }
 .top{
     background-color: rgb(207, 219, 238);
     background-image: url("src/certo.png");
     background-size: contain;
     transition-duration: 0.7s;
+    background-blend-mode: multiply;
 }
 .rigth{
     background-color: rgb(207, 219, 238);
     background-image: url("src/bottom\ .png");
     background-size: contain;
     transition-duration: 0.7s;
+    background-blend-mode: multiply;
 }   
 .bottom{
     background-color: rgb(207, 219, 238);
@@ -58,6 +61,7 @@
     color: cornflowerblue;
     background-size: contain;
     transition-duration: 0.7s;
+    background-blend-mode: multiply;
 }
 .lose{
     background-image: url("src/explosion.png");
