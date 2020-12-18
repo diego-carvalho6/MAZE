@@ -38,23 +38,26 @@
     background-image: url("src/top.png");
     background-color: rgb(207, 219, 238);
     background-size: contain;
+    transition-duration: 0.7s;
 }
 .top{
     background-color: rgb(207, 219, 238);
     background-image: url("src/certo.png");
     background-size: contain;
+    transition-duration: 0.7s;
 }
 .rigth{
     background-color: rgb(207, 219, 238);
     background-image: url("src/bottom\ .png");
-    
     background-size: contain;
+    transition-duration: 0.7s;
 }   
 .bottom{
     background-color: rgb(207, 219, 238);
     background-image: url("src/left.png");
     color: cornflowerblue;
     background-size: contain;
+    transition-duration: 0.7s;
 }
 .lose{
     background-image: url("src/explosion.png");
@@ -64,3 +67,4 @@
     margin: 0 auto;
     text-align: center;
 }
+
