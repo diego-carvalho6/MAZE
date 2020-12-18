@@ -1,0 +1,61 @@
+.labirinto{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 30px auto; 
+   
+    width: 375px;
+    height: 525px;
+    
+    background-color: chocolate;
+    transform: rotateZ(-90deg);  
+}
+.parede{
+    position: relative;
+    width: 25px;
+    height: 25px;
+    background-color: cornflowerblue;
+}
+.vazio{
+    width: 25px;
+    height: 25px;
+    background-color: rgb(207, 219, 238);
+}
+.end{
+    width: 25px;
+    height: 25px;
+    background-color: rgb(252, 4, 4);
+}
+.start{
+    
+    width: 25px;
+    height: 25px;
+    background-color: rgb(161, 110, 163);
+    
+    
+}
+.left{
+    background-image: url("src/top.png");
+    background-color: rgb(207, 219, 238);
+    background-size: contain;
+}
+.top{
+    background-color: rgb(207, 219, 238);
+    background-image: url("src/certo.png");
+    background-size: contain;
+}
+.rigth{
+    background-color: rgb(207, 219, 238);
+    background-image: url("src/bottom\ .png");
+    
+    background-size: contain;
+}   
+.bottom{
+    background-color: rgb(207, 219, 238);
+    background-image: url("src/left.png");
+    color: cornflowerblue;
+    background-size: contain;
+}
+.lose{
+    background-image: url("src/explosion.png");
+}
