@@ -88,28 +88,28 @@ function move(value){
     let object = document.getElementById("start")
     switch(value.keyCode) {
         case 37:
-          boxTop += -25
+          boxTop += -object.offsetWidth
           object.classList.remove("top")
           object.classList.remove("rigth")
           object.classList.remove("bottom")
           object.classList.add("left")
           break;
         case 38:
-          boxLeft += 25
+          boxLeft += object.offsetWidth
           object.classList.remove("bottom")
           object.classList.remove("rigth")
           object.classList.remove("left")
           object.classList.add("top")
           break;
         case 39:
-          boxTop += +25
+          boxTop += object.offsetWidth
           object.classList.remove("top")
           object.classList.remove("bottom")
           object.classList.remove("left")
           object.classList.add("rigth")
           break;
         case 40:
-          boxLeft += -25
+          boxLeft += -object.offsetWidth
           object.classList.remove("top")
           object.classList.remove("rigth")
           object.classList.remove("left")
@@ -125,28 +125,34 @@ function move(value){
     object.style.left =  boxLeft + "px" 
 }
 function collide(boxTop, boxLeft){
+    let labirinto = document.querySelector(".labirinto")
     let walls = document.querySelectorAll(".parede")
     boxLeft += 225
-    console.log(boxTop)
+    if(labirinto.offsetWidth === 480){
+        boxLeft += 63
+    }
+    if(labirinto.offsetWidth === 750){
+        boxLeft += 225
+    }
+
     for (let i = 0; i < walls.length; i++){
         let wallTop = walls[i].offsetTop
         let wallLeft = walls[i].offsetLeft
-        let wallWidth = 25
+        let wallWidth = walls[i].offsetWidth
         if (boxTop < wallTop + wallWidth &&
             (boxTop) + wallWidth > wallTop &&
             boxLeft < wallLeft + wallWidth &&
             wallWidth + boxLeft > wallLeft) {
                 Lose()
-        }else if(walls[i].classList.contains("collide")){
-        
-        }else if(boxTop === -25){
+        }else if(boxTop < 0){
             Loser()
-        }else if(boxTop === 500 && boxLeft === 200){
+        }else if(boxTop === 500 && boxLeft === 200 || boxTop === 640 && boxLeft === 256 || boxTop >= 1000){
             victory()
         }
     }    
 }
 
 document.addEventListener("keydown", move)
+
 
 
